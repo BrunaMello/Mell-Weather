@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7ECCDD9F2B868AA00048564E /* Location Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECCDD9E2B868AA00048564E /* Location Manager.swift */; };
+		7ECCDDA12B868AED0048564E /* DateFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECCDDA02B868AED0048564E /* DateFormatted.swift */; };
+		7ECCDDA32B868B430048564E /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECCDDA22B868B430048564E /* HourlyForecastView.swift */; };
+		7ECCDDA52B868B840048564E /* TenDaysForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECCDDA42B868B840048564E /* TenDaysForecastView.swift */; };
+		7ECCDDA92B868BED0048564E /* HourlyForecastChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECCDDA82B868BED0048564E /* HourlyForecastChartView.swift */; };
 		7EE6206D2B868344006C3D72 /* Mell_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6206C2B868344006C3D72 /* Mell_WeatherApp.swift */; };
 		7EE6206F2B868344006C3D72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6206E2B868344006C3D72 /* ContentView.swift */; };
 		7EE620712B868344006C3D72 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE620702B868344006C3D72 /* Item.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7ECCDD9E2B868AA00048564E /* Location Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location Manager.swift"; sourceTree = "<group>"; };
+		7ECCDDA02B868AED0048564E /* DateFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatted.swift; sourceTree = "<group>"; };
+		7ECCDDA22B868B430048564E /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
+		7ECCDDA42B868B840048564E /* TenDaysForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDaysForecastView.swift; sourceTree = "<group>"; };
+		7ECCDDA82B868BED0048564E /* HourlyForecastChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastChartView.swift; sourceTree = "<group>"; };
 		7EE620692B868344006C3D72 /* Mell Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mell Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE6206C2B868344006C3D72 /* Mell_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mell_WeatherApp.swift; sourceTree = "<group>"; };
 		7EE6206E2B868344006C3D72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +56,7 @@
 		7EE620852B868345006C3D72 /* Mell WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mell WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE620892B868345006C3D72 /* Mell_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mell_WeatherUITests.swift; sourceTree = "<group>"; };
 		7EE6208B2B868345006C3D72 /* Mell_WeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mell_WeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7EE620982B868422006C3D72 /* Mell Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mell Weather.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7ECCDDA62B868BA30048564E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EE6206E2B868344006C3D72 /* ContentView.swift */,
+				7ECCDDA22B868B430048564E /* HourlyForecastView.swift */,
+				7ECCDDA42B868B840048564E /* TenDaysForecastView.swift */,
+				7ECCDDA82B868BED0048564E /* HourlyForecastChartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7ECCDDA72B868BC20048564E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7ECCDD9E2B868AA00048564E /* Location Manager.swift */,
+				7ECCDDA02B868AED0048564E /* DateFormatted.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7EE620602B868344006C3D72 = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +127,10 @@
 		7EE6206B2B868344006C3D72 /* Mell Weather */ = {
 			isa = PBXGroup;
 			children = (
+				7ECCDDA72B868BC20048564E /* Model */,
+				7ECCDDA62B868BA30048564E /* Views */,
+				7EE620982B868422006C3D72 /* Mell Weather.entitlements */,
 				7EE6206C2B868344006C3D72 /* Mell_WeatherApp.swift */,
-				7EE6206E2B868344006C3D72 /* ContentView.swift */,
 				7EE620702B868344006C3D72 /* Item.swift */,
 				7EE620722B868345006C3D72 /* Assets.xcassets */,
 				7EE620742B868345006C3D72 /* Preview Content */,
@@ -260,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECCDDA12B868AED0048564E /* DateFormatted.swift in Sources */,
+				7ECCDDA52B868B840048564E /* TenDaysForecastView.swift in Sources */,
 				7EE6206F2B868344006C3D72 /* ContentView.swift in Sources */,
+				7ECCDDA32B868B430048564E /* HourlyForecastView.swift in Sources */,
+				7ECCDD9F2B868AA00048564E /* Location Manager.swift in Sources */,
 				7EE620712B868344006C3D72 /* Item.swift in Sources */,
 				7EE6206D2B868344006C3D72 /* Mell_WeatherApp.swift in Sources */,
+				7ECCDDA92B868BED0048564E /* HourlyForecastChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,12 +461,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mell Weather/Mell Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mell Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = X5F5RXLH5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wants your location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Wants your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,12 +493,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mell Weather/Mell Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mell Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = X5F5RXLH5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wants your location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Wants your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
