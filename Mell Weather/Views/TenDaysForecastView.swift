@@ -18,25 +18,30 @@ struct TenDayForcastView: View {
         VStack(alignment: .leading) {
             Text("10-DAY FORCAST")
                 .font(.caption)
-                .opacity(0.5)
+                .opacity(0.8)
+                .foregroundColor(.black)
+            Divider().background(Color.gray)
             List(dayWeatherList, id: \.date) { dailyWeather in
                 HStack {
                     Text(dailyWeather.date.formatAsAbbreviatedDay())
                         .frame(maxWidth: 50, alignment: .leading)
+                        .foregroundColor(.black)
                     Image(systemName: "\(dailyWeather.symbolName)")
-                        .foregroundColor(.yellow)
-                    Text(dailyWeather.lowTemperature.formatted())
+                        .foregroundColor(.orange)
+                    Text(dailyWeather.lowTemperature.formatted(.measurement( numberFormatStyle: .number.precision(.fractionLength(0)))))
                         .frame(maxWidth: .infinity)
-                    Text(dailyWeather.highTemperature.formatted())
+                        .foregroundColor(.black)
+                    Text(dailyWeather.highTemperature.formatted(.measurement( numberFormatStyle: .number.precision(.fractionLength(0)))))
                         .frame(maxWidth: .infinity, alignment: .trailing)
-                }.listRowBackground(Color.blue)
+                        .foregroundColor(.black)
+                }
+                .listRowBackground(Color.clear)
             }.listStyle(.plain)
         }
         .frame(height: 300).padding()
         .background(content: {
-            Color.blue
+            Color.gray.opacity(0.1)
         })
-        .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-        .foregroundColor(.white)
+        .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
     }
 }

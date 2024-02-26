@@ -18,23 +18,25 @@ struct HourlyForcastView: View {
         VStack(alignment: .leading) {
             Text("HOURLY FORECAST")
                 .font(.caption)
-                .opacity(0.5)
+                .opacity(0.8)
+                .foregroundColor(.black)
+            Divider().background(Color.gray)
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(hourWeatherList, id: \.date) { hourWeatherItem in
                         VStack(spacing: 20) {
                             Text(hourWeatherItem.date.formatAsAbbreviatedTime())
-                            Image(systemName: "\(hourWeatherItem.symbolName).fill")
-                                .foregroundColor(.yellow)
-                            Text(hourWeatherItem.temperature.formatted())
+                            Image(systemName: "\(hourWeatherItem.symbolName)")
+                                .foregroundColor(.orange)
+                            Text(hourWeatherItem.temperature.formatted(.measurement( numberFormatStyle: .number.precision(.fractionLength(0)))))
                                 .fontWeight(.medium)
                         }.padding()
                     }
                 }
             }
         }.padding().background {
-            Color.blue
-        }.clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-            .foregroundColor(.white)
+            Color.gray.opacity(0.1)
+        }.clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
     }
 }
+

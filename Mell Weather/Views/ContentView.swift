@@ -20,26 +20,32 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
+        ScrollView(.vertical) {
             if let weather {
                 VStack {
-                    Text("San Francisco")
-                        .font(.largeTitle)
-                    Text("\(weather.currentWeather.temperature.formatted())")
+                    VStack {
+                        CurrentWeatherView()
+                        HourlyForcastView(hourWeatherList: hourlyWeatherData)
+                            .padding(.bottom, 20)
+                            // HourlyForecastChartView(hourlyWeatherData: hourlyWeatherData)
+                        TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast)
+                    }
+                    
+                    HStack {
+                        FeelsLikeView()
+                        Spacer()
+                    }
                 }
-                HourlyForcastView(hourWeatherList: hourlyWeatherData)
-                    //  Spacer()
-                HourlyForecastChartView(hourlyWeatherData: hourlyWeatherData)
-                TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast)
+                
+               
             }
         }
         .padding()
         .task(id: locationManager.currentLocation) {
             do {
-                    // if let location = locationManager.currentLocation {
-                let location = CLLocation(latitude: 37.774929, longitude: -122.419418)
+                    if let location = locationManager.currentLocation {
                 self.weather =  try await weatherService.weather(for: location)
-                    // }
+                     }
             } catch {
                 print(error)
             }
@@ -51,3 +57,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

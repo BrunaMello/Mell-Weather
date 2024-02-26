@@ -11,6 +11,7 @@ import WeatherKit
 import Charts
 
 struct HourlyForecastChartView: View {
+    
     let hourlyWeatherData: [HourWeather]
     
     var body: some View {
