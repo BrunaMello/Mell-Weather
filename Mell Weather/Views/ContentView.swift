@@ -37,7 +37,7 @@ struct ContentView: View {
                 HStack {
                     FeelsLikeView()
                     Spacer()
-                    FeelsLikeView()
+                    UvIndexView()
                 }
             }
         }
