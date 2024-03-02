@@ -17,14 +17,16 @@ struct CurrentWeatherView: View {
     var body: some View {
         VStack{
             if let weather {
+                Text(locationManager.placeName)
+                    .font(.system(size: 40))
+                    .fontWeight(.regular)
                 HStack {
-                    Image(systemName: weather.currentWeather.symbolName)
-                        .resizable()
-                        .frame(width: 100, height: 90)
                     VStack {
-                        Text(locationManager.placeName)
-                            .font(.system(size: 40))
-                            .fontWeight(.regular)
+                        Image(systemName: weather.currentWeather.symbolName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    VStack {
                         Text(weather.currentWeather.temperature.formatted(.measurement( numberFormatStyle: .number.precision(.fractionLength(0)))))
                             .font(.system(size: 80))
                             .fontWeight(.heavy)

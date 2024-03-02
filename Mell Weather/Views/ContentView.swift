@@ -19,39 +19,41 @@ struct ContentView: View {
         }
     }
     
+        // HourlyForcastView(hourWeatherList: hourlyWeatherData)
+        //TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast)
+        // HourlyForecastChartView(hourlyWeatherData: hourlyWeatherData)
+        // CurrentWeatherView()
+    
     var body: some View {
-        ScrollView(.vertical) {
-            if let weather {
-                VStack {
-                    VStack {
-                        CurrentWeatherView()
-                        HourlyForcastView(hourWeatherList: hourlyWeatherData)
-                            .padding(.bottom, 20)
-                            // HourlyForecastChartView(hourlyWeatherData: hourlyWeatherData)
-                        TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast)
-                    }
-                    
-                    HStack {
-                        FeelsLikeView()
-                        Spacer()
-                    }
+        VStack {
+            CurrentWeatherView()
+                .padding(.top, -30)
+            Spacer()
+            ScrollView {
+                HourlyForcastView(hourWeatherList: hourlyWeatherData)
+                if let weather {
+                    TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast)
                 }
-                
-               
+                HStack {
+                    FeelsLikeView()
+                    Spacer()
+                    FeelsLikeView()
+                }
             }
         }
         .padding()
         .task(id: locationManager.currentLocation) {
             do {
-                    if let location = locationManager.currentLocation {
-                self.weather =  try await weatherService.weather(for: location)
-                     }
+                if let location = locationManager.currentLocation {
+                    self.weather =  try await weatherService.weather(for: location)
+                }
             } catch {
                 print(error)
             }
         }
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

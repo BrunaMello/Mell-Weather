@@ -16,10 +16,13 @@ struct HourlyForcastView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("HOURLY FORECAST")
-                .font(.caption)
-                .opacity(0.8)
-                .foregroundColor(.black)
+            HStack {
+                Image(systemName: "clock")
+                Text("HOURLY FORECAST")
+                    .font(.caption)
+                    .opacity(0.8)
+                    .foregroundColor(.black)
+            }
             Divider().background(Color.gray)
             ScrollView(.horizontal) {
                 HStack {

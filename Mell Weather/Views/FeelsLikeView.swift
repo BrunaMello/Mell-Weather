@@ -22,6 +22,9 @@ struct FeelsLikeView: View {
                         HStack {
                             Image(systemName: "thermometer.medium")
                             Text("FEELS LIKE")
+                                .font(.caption)
+                                .opacity(0.8)
+                                .foregroundColor(.black)
                         }
                         Divider()
                     Text(weather.currentWeather.temperature.formatted(.measurement( numberFormatStyle: .number.precision(.fractionLength(0)))))

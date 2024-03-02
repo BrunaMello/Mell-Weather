@@ -1,9 +1,9 @@
-//
-//  TenDaysForecastView.swift
-//  Mell Weather
-//
-//  Created by Bruna Mello on 21/02/2024.
-//
+    //
+    //  TenDaysForecastView.swift
+    //  Mell Weather
+    //
+    //  Created by Bruna Mello on 21/02/2024.
+    //
 
 import SwiftUI
 import CoreLocation
@@ -11,15 +11,19 @@ import WeatherKit
 import Charts
 
 struct TenDayForcastView: View {
-   
+    
+    
     let dayWeatherList: [DayWeather]
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("10-DAY FORCAST")
-                .font(.caption)
-                .opacity(0.8)
-                .foregroundColor(.black)
+            HStack {
+                Image(systemName: "calendar")
+                Text("10-DAY FORCAST")
+                    .font(.caption)
+                    .opacity(0.8)
+                    .foregroundColor(.black)
+            }
             Divider().background(Color.gray)
             List(dayWeatherList, id: \.date) { dailyWeather in
                 HStack {
@@ -45,3 +49,4 @@ struct TenDayForcastView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
     }
 }
+
