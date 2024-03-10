@@ -15,6 +15,7 @@ struct TenDayForcastView: View {
     
     let dayWeatherList: [DayWeather]
     
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -35,6 +36,9 @@ struct TenDayForcastView: View {
                     Text(dailyWeather.lowTemperature.formatted(.measurement( numberFormatStyle: .number.precision(.fractionLength(0)))))
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.black)
+                    ProgressView(value: dailyWeather.precipitationChance)
+                        .progressViewStyle(.linear)
+                        .frame(minWidth: 100, maxHeight: 5)
                     Text(dailyWeather.highTemperature.formatted(.measurement( numberFormatStyle: .number.precision(.fractionLength(0)))))
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .foregroundColor(.black)
@@ -49,4 +53,5 @@ struct TenDayForcastView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
     }
 }
+
 
