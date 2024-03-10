@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E21D06B2B9DC02900930129 /* WindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21D06A2B9DC02900930129 /* WindView.swift */; };
 		7E2A84AF2B8D1B6D000B263C /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A84AE2B8D1B6D000B263C /* CurrentWeatherView.swift */; };
 		7E2A84B12B8D2258000B263C /* FeelsLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A84B02B8D2258000B263C /* FeelsLikeView.swift */; };
 		7E2A84B32B8D2727000B263C /* TemperatureFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A84B22B8D2727000B263C /* TemperatureFormatted.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E21D06A2B9DC02900930129 /* WindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindView.swift; sourceTree = "<group>"; };
 		7E2A84AE2B8D1B6D000B263C /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
 		7E2A84B02B8D2258000B263C /* FeelsLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelsLikeView.swift; sourceTree = "<group>"; };
 		7E2A84B22B8D2727000B263C /* TemperatureFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureFormatted.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				7E2A84AE2B8D1B6D000B263C /* CurrentWeatherView.swift */,
 				7E2A84B02B8D2258000B263C /* FeelsLikeView.swift */,
 				7EA3FED62B933B4F0024AD65 /* UvIndexView.swift */,
+				7E21D06A2B9DC02900930129 /* WindView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				7EE620712B868344006C3D72 /* Item.swift in Sources */,
 				7EE6206D2B868344006C3D72 /* Mell_WeatherApp.swift in Sources */,
 				7ECCDDA92B868BED0048564E /* HourlyForecastChartView.swift in Sources */,
+				7E21D06B2B9DC02900930129 /* WindView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

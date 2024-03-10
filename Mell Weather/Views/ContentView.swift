@@ -39,6 +39,7 @@ struct ContentView: View {
                     Spacer()
                     UvIndexView()
                 }
+                WindView()
             }
         }
         .padding()
