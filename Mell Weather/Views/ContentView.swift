@@ -40,6 +40,7 @@ struct ContentView: View {
                     UvIndexView()
                 }
                 WindView()
+                PressureView()
             }
         }
         .padding()
